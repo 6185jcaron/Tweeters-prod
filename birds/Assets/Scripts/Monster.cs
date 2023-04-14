@@ -9,7 +9,8 @@ public class Monster : MonoBehaviour
     [SerializeField] Sprite _deadSprite;
     [SerializeField] ParticleSystem _particleSystem;
 
-    void OnCollisionEnter2D(Collision2D collision)
+   /*
+    * void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("XV");
         while (_hasDied == true)
@@ -19,7 +20,7 @@ public class Monster : MonoBehaviour
             
         }
       
-    }
+    } */
 
     bool _hasDied;
 
@@ -56,10 +57,10 @@ public class Monster : MonoBehaviour
         return false;
     }
 
-   /* void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         StartCoroutine(ResetAfterDelay1());
-    } */
+    } 
     private IEnumerator ResetAfterDelay1()
     {
         _particleSystem.Play();
