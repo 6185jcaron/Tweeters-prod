@@ -8,21 +8,11 @@ public class Monster : MonoBehaviour
 {
     [SerializeField] Sprite _deadSprite;
     [SerializeField] ParticleSystem _particleSystem;
-
-   /*
-    * void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("XV");
-        while (_hasDied == true)
-        {
-            //Die();
-            StartCoroutine(ResetAfterDelay1());
-            
-        }
-      
-    } */
-
     bool _hasDied;
+
+
+
+    
 
     private void OnMouseDown()
     {
@@ -42,6 +32,17 @@ public class Monster : MonoBehaviour
         }
         
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (ShouldDieFromCollision(collision))
+        {
+
+            StartCoroutine(ResetAfterDelay1());
+
+        }
+
+    }
 
     bool ShouldDieFromCollision(Collision2D collision)
     {
@@ -57,23 +58,15 @@ public class Monster : MonoBehaviour
         return false;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        StartCoroutine(ResetAfterDelay1());
-    } 
+
     private IEnumerator ResetAfterDelay1()
     {
+        _hasDied = true;
+        GetComponent<SpriteRenderer>().sprite = _deadSprite;
         _particleSystem.Play();
         yield return new WaitForSeconds(1);
-        GetComponent<SpriteRenderer>().sprite = _deadSprite;
         gameObject.SetActive(false);
-        _hasDied = true;
+        
     }
-    /*void Die()
-    {
-        GetComponent<SpriteRenderer>().sprite = _deadSprite;
-        _particleSystem.Play();
-        yield return new WaitForSeconds(3);
-        gameObject.SetActive(false);
-    } */
+    
 }
