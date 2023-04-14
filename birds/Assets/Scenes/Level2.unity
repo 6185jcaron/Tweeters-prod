@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 348680440}
   - component: {fileID: 348680439}
   - component: {fileID: 348680444}
+  - component: {fileID: 348680445}
   m_Layer: 0
   m_Name: MonsterPurpleOpen (1)
   m_TagString: Untagged
@@ -644,6 +645,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &348680445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348680438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8e5f0624d9dd94b9e99fa46c2f4b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deadSprite: {fileID: 0}
+  _particleSystem: {fileID: 0}
 --- !u!1001 &387817071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2179,6 +2194,7 @@ GameObject:
   - component: {fileID: 934769503}
   - component: {fileID: 934769507}
   - component: {fileID: 934769508}
+  - component: {fileID: 934769509}
   m_Layer: 0
   m_Name: MonsterPurpleOpen
   m_TagString: Untagged
@@ -2428,6 +2444,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &934769509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934769502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8e5f0624d9dd94b9e99fa46c2f4b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deadSprite: {fileID: 0}
+  _particleSystem: {fileID: 0}
 --- !u!1001 &951513750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4565,6 +4595,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810574504}
   m_CullTransparentMesh: 1
+--- !u!1 &1826931074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826931076}
+  - component: {fileID: 1826931075}
+  m_Layer: 0
+  m_Name: LevelController (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1826931075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826931074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15682f569ae9f54f864191f8096d832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextLevelName: Level3
+--- !u!4 &1826931076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826931074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1885974265
 GameObject:
   m_ObjectHideFlags: 0

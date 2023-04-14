@@ -11,10 +11,12 @@ public class Monster : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("XV");
         while (_hasDied == true)
         {
             //Die();
             StartCoroutine(ResetAfterDelay1());
+            
         }
       
     }
